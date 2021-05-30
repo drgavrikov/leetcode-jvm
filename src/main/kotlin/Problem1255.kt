@@ -31,13 +31,3 @@ class Problem1255 {
         const val ALPHABET_SIZE: Int = 26
     }
 }
-
-fun main() {
-    check(
-        Problem1255().maxScoreWords(
-            arrayOf("dog", "cat", "dad", "good"),
-            charArrayOf('a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'),
-            intArrayOf(1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        ) == 23
-    )
-}
