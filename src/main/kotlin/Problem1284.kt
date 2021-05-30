@@ -69,7 +69,7 @@ class Problem1284 {
         return dfs(Matrix(mat))
     }
 
-    fun dfs(matrix: Matrix): Int {
+    private fun dfs(matrix: Matrix): Int {
         val dist = mutableMapOf<Matrix, Int>()
         dist[matrix] = 0
         val queue = LinkedList<Matrix>()
@@ -87,9 +87,4 @@ class Problem1284 {
         }
         return -1
     }
-}
-
-fun main() {
-    val mat = arrayOf(intArrayOf(0, 0), intArrayOf(0, 1))
-    check(Problem1284().minFlips(mat) == 3)
 }

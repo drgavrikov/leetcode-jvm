@@ -32,10 +32,3 @@ class Problem1028 {
         return vertices[0]
     }
 }
-
-fun main() {
-    val tree = Problem1028().recoverFromPreorder("1-401--349---90--88")
-    check(tree?.`val` == 1)
-    check(tree?.left?.`val` == 401)
-    check(tree?.left?.left?.`val` == 349)
-}

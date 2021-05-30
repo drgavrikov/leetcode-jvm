@@ -13,11 +13,3 @@ class Problem1402 {
         return sum
     }
 }
-
-fun main() {
-    val satisfaction1 = intArrayOf(-1, -8, 0, 5, -9)
-    check(Problem1402().maxSatisfaction(satisfaction1) == 14)
-
-    val satisfaction2 = intArrayOf(4, 3, 2)
-    check(Problem1402().maxSatisfaction(satisfaction2) == 20)
-}
