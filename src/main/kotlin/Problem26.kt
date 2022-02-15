@@ -3,7 +3,6 @@
  * @url https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  */
 class Problem26 {
-
     fun removeDuplicates(nums: IntArray): Int {
         val empty = -1000
         var distinctIndex = 0

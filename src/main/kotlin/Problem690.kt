@@ -3,7 +3,6 @@
  * @url https://leetcode.com/problems/employee-importance/
  */
 class Problem690 {
-
     class Employee(id: Int, importance: Int, subordinates: List<Int>) {
         var id = id
         var importance = importance

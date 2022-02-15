@@ -3,7 +3,6 @@
  * @url https://leetcode.com/problems/palindrome-number/
  */
 class Problem9 {
-
     fun isPalindrome(x: Int): Boolean {
         val str = x.toString()
         val len = str.length

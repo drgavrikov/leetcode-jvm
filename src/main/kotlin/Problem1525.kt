@@ -3,7 +3,6 @@
  * @url https://leetcode.com/problems/number-of-good-ways-to-split-a-string/
  */
 class Problem1525 {
-
     fun numSplits(s: String): Int {
         val alphabetSize = 26
         val left = (0 until alphabetSize).map { 0 }.toIntArray()

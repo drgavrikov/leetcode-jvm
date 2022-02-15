@@ -5,7 +5,6 @@ import kotlin.math.max
  * @url https://leetcode.com/problems/cherry-pickup-ii/
  */
 class Problem1463 {
-
     fun cherryPickup(grid: Array<IntArray>): Int {
         val rows = grid.size
         val cols = grid[0].size

@@ -5,7 +5,6 @@ import kotlin.math.max
  * @url https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
  */
 class Problem1423 {
-
     fun longestStrChain(words: Array<String>): Int {
         words.sortBy { it.length }
         val longestChain = words.map { 1 }.toIntArray()
