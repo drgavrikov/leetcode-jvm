@@ -5,7 +5,6 @@ import kotlin.math.max
  * @url https://leetcode.com/problems/max-consecutive-ones/
  */
 class Problem485 {
-
     fun findMaxConsecutiveOnes(nums: IntArray): Int {
         var result = 0
         var current = 0

@@ -7,7 +7,6 @@ import kotlin.math.min
  * @url https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/
  */
 class Problem1509 {
-
     fun minDifference(nums: IntArray): Int {
         val size = nums.size
         if (size <= 3) return 0
