@@ -1,10 +1,12 @@
+package medium
+
 import kotlin.math.max
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
+ * @url https://leetcode.com/problems/longest-string-chain/
  */
-class Problem1423 {
+class Problem1048 {
     fun longestStrChain(words: Array<String>): Int {
         words.sortBy { it.length }
         val longestChain = words.map { 1 }.toIntArray()
@@ -15,7 +17,7 @@ class Problem1423 {
                 }
             }
         }
-        return longestChain.maxOrNull()!!
+        return longestChain.max()!!
     }
 
     private fun isPredecessor(word1: String, word2: String): Boolean {
