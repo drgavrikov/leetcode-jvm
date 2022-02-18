@@ -1,3 +1,5 @@
+package medium
+
 /**
  * @author Aleksandr Gavrikov
  * @url https://leetcode.com/problems/number-of-good-ways-to-split-a-string/
