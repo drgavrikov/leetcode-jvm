@@ -1,3 +1,5 @@
+package medium
+
 import java.util.*
 import kotlin.math.abs
 import kotlin.math.min
