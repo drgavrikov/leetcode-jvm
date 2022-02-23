@@ -1,5 +1,11 @@
+package hard
+
 import kotlin.math.max
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/maximum-score-words-formed-by-letters/
+ */
 class Problem1255 {
     fun maxScoreWords(words: Array<String>, letters: CharArray, score: IntArray): Int {
         check(score.size == ALPHABET_SIZE)
