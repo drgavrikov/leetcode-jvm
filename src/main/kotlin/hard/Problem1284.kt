@@ -1,6 +1,12 @@
+package hard
+
 import java.util.*
 import kotlin.math.abs
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/
+ */
 class Problem1284 {
     class Matrix(private val matrix: List<List<Int>>) {
 

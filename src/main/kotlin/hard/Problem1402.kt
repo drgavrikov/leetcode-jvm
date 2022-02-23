@@ -1,3 +1,9 @@
+package hard
+
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/reducing-dishes/
+ */
 class Problem1402 {
     fun maxSatisfaction(satisfaction: IntArray): Int {
         val sum = accumulate(satisfaction.sortedArrayDescending())
