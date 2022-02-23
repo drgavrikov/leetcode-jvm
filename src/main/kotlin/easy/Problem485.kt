@@ -1,3 +1,5 @@
+package easy
+
 import kotlin.math.max
 
 /**

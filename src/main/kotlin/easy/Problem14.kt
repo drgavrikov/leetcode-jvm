@@ -1,6 +1,8 @@
+package easy
+
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ * @url https://leetcode.com/problems/longest-common-prefix/submissions/
  */
 class Problem14 {
 

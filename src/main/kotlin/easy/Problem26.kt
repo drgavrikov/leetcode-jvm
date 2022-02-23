@@ -1,3 +1,5 @@
+package easy
+
 /**
  * @author Aleksandr Gavrikov
  * @url https://leetcode.com/problems/remove-duplicates-from-sorted-array/

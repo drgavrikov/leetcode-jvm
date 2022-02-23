@@ -1,5 +1,11 @@
+package hard
+
 import java.util.*
 
+/**
+ * @author Aleksandr Gavrikov
+ * @url https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
+ */
 class Problem1028 {
     class TreeNode(var `val`: Int) {
         var left: TreeNode? = null

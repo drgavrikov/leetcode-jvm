@@ -1,6 +1,8 @@
+package easy
+
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/palindrome-number/
+ * @url https://leetcode.com/problems/pascals-triangle/
  */
 class Problem118 {
     fun generate(numRows: Int): List<List<Int>> {

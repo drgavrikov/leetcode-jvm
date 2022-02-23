@@ -1,3 +1,5 @@
+package hard
+
 import java.util.*
 import kotlin.math.max
 
