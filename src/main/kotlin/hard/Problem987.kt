@@ -1,5 +1,6 @@
 package hard
 
+import TreeNode
 import java.util.TreeMap
 
 /**
@@ -7,10 +8,6 @@ import java.util.TreeMap
  * @url https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
  */
 class Problem987 {
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
 
     fun verticalTraversal(root: TreeNode?): List<List<Int>> {
 
