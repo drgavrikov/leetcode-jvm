@@ -1,5 +1,6 @@
 package hard
 
+import TreeNode
 import java.util.*
 
 /**
@@ -7,14 +8,6 @@ import java.util.*
  * @url https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
  */
 class Problem1028 {
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-
-        override fun toString(): String {
-            return "[$`val` left=${left} right=${right}]"
-        }
-    }
 
     fun recoverFromPreorder(S: String): TreeNode? {
         val vertices = Stack<TreeNode>()

@@ -1,6 +1,7 @@
 package medium
 
 import AbstractTest
+import TreeNode
 import hard.Problem987
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.DynamicTest
@@ -10,27 +11,27 @@ class Problem987Test : AbstractTest() {
         val problem987 = Problem987()
         return listOf(
             DynamicTest.dynamicTest("test1") {
-                val root = Problem987.TreeNode(3)
+                val root = TreeNode(3)
 
-                root.left = Problem987.TreeNode(9)
-                root.right = Problem987.TreeNode(20)
+                root.left = TreeNode(9)
+                root.right = TreeNode(20)
 
-                root.right!!.left = Problem987.TreeNode(15)
-                root.right!!.right = Problem987.TreeNode(7)
+                root.right!!.left = TreeNode(15)
+                root.right!!.right = TreeNode(7)
 
                 val actual = problem987.verticalTraversal(root)
                 Assertions.assertThat(actual).isEqualTo(listOf(listOf(9), listOf(3, 15), listOf(20), listOf(7)))
             },
             DynamicTest.dynamicTest("test2") {
-                val root = Problem987.TreeNode(1)
+                val root = TreeNode(1)
 
-                root.left = Problem987.TreeNode(2)
-                root.right = Problem987.TreeNode(3)
+                root.left = TreeNode(2)
+                root.right = TreeNode(3)
 
-                root.left!!.left = Problem987.TreeNode(4)
-                root.left!!.right = Problem987.TreeNode(5)
-                root.right!!.left = Problem987.TreeNode(6)
-                root.right!!.right = Problem987.TreeNode(7)
+                root.left!!.left = TreeNode(4)
+                root.left!!.right = TreeNode(5)
+                root.right!!.left = TreeNode(6)
+                root.right!!.right = TreeNode(7)
 
                 val actual = problem987.verticalTraversal(root)
                 Assertions.assertThat(actual).isEqualTo(
