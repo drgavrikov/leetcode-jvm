@@ -2,7 +2,7 @@ package easy
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/two-sum/
+ * @url https://leetcode.com/problems/shortest-completing-word/
  */
 class Problem748 {
 
