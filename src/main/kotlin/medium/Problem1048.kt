@@ -17,7 +17,7 @@ class Problem1048 {
                 }
             }
         }
-        return longestChain.max()!!
+        return longestChain.maxOrNull()!!
     }
 
     private fun isPredecessor(word1: String, word2: String): Boolean {

@@ -15,6 +15,6 @@ class Problem748 {
     }
 
     private fun getLetterCount(word: String) = word.filter { it.isLetter() }
-        .groupingBy { it.toLowerCase() }
+        .groupingBy { it.lowercaseChar() }
         .eachCount()
 }
