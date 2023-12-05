@@ -1,4 +1,4 @@
-package easy
+package medium
 
 import AbstractTest
 import org.assertj.core.api.Assertions
