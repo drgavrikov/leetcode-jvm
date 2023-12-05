@@ -2,7 +2,7 @@ package easy
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/single-number/
+ * @url https://leetcode.com/problems/power-of-three/
  */
 class Problem326 {
     fun isPowerOfThree(n: Int): Boolean {

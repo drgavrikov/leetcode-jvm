@@ -4,7 +4,7 @@ import TreeNode
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/single-number/
+ * @url https://leetcode.com/problems/same-tree/
  */
 class Problem100 {
     fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {

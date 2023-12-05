@@ -4,7 +4,7 @@ package easy
  * @author Aleksandr Gavrikov
  * @url https://leetcode.com/problems/single-number/
  */
-class Problem138 {
+class Problem136 {
     fun singleNumber(nums: IntArray): Int {
         val numSet = hashSetOf<Int>()
         nums.forEach { num ->
