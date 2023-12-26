@@ -1,7 +1,6 @@
 package medium
 
 import AbstractTest
-import ListNode
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.DynamicTest
 
