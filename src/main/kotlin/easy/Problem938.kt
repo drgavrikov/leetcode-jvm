@@ -8,16 +8,14 @@ import TreeNode
  */
 class Problem938 {
 
+    fun dfs(root: TreeNode?, low: Int, high: Int): Int {
+        if (root == null) return 0
+        val sum = if (root.`val` in low..high) root.`val` else 0
+        return sum + dfs(root.left, low, high) + dfs(root.right, low, high)
+    }
+
     fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
-        var sum = 0
-        fun dfs(node: TreeNode?) {
-            if (node == null) return
-            if (node.`val` in low..high) sum += node.`val`
-            if (low <= node.`val`) dfs(node.left)
-            if (node.`val` <= high) dfs(node.right)
-        }
-        dfs(root)
-        return sum
+        return dfs(root, low, high)
     }
 }
 
