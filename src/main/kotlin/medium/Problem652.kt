@@ -12,7 +12,7 @@ class Problem652 {
         val frequency = mutableMapOf<String, Int>()
         val result = mutableListOf<TreeNode?>()
         fun dfs(root: TreeNode?): String {
-            if (root == null) return "";
+            if (root == null) return ""
             val treeCode = "(${dfs(root.left)})${root.`val`}(${dfs(root.right)})"
 
             frequency.putIfAbsent(treeCode, 0)
