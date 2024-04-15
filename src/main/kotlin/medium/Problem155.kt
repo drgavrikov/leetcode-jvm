@@ -1,11 +1,10 @@
 package medium
 
 import java.util.*
-import kotlin.math.min
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/min-stack/
+ * @url https://leetcode.com/problems/min-stack/solutions/4599315/kotlin-solution-with-second-stack/
  */
 class Problem155 {
     inner class MinStack() {
@@ -15,13 +14,12 @@ class Problem155 {
 
         fun push(`val`: Int) {
             stack.push(`val`)
-            if (minElements.empty()) minElements.push(`val`)
-            else minElements.push(min(`val`, minElements.peek()))
+            if (minElements.empty() || minElements.peek() > `val`) minElements.push(`val`)
         }
 
         fun pop() {
+            if (stack.peek() == minElements.peek()) minElements.pop()
             stack.pop()
-            minElements.pop()
         }
 
         fun top(): Int {
@@ -33,4 +31,16 @@ class Problem155 {
         }
 
     }
+}
+
+fun main() {
+    val problem155 = Problem155()
+    val stack = problem155.MinStack()
+    stack.push(-2)
+    stack.push(0)
+    stack.push(-3)
+    check(-3 == stack.getMin())
+    stack.pop()
+    check(0 == stack.top())
+    check(-2 == stack.getMin())
 }
