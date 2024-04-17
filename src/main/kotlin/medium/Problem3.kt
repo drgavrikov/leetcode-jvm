@@ -4,24 +4,25 @@ import kotlin.math.max
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ * @url https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/3742832/sliding-window-linear-solution/
  */
 class Problem3 {
     fun lengthOfLongestSubstring(s: String): Int {
-        var left = 0
-        var right = 0
-        var result = 1
+        val lastCharIndex = HashMap<Char, Int>()
+        var result = 0
 
-        val chars = mutableSetOf<Char>()
-        while (right < s.length) {
-            while (chars.contains(s[right])) {
-                chars.remove(s[left])
-                left++
-            }
-            chars.add(s[right])
-            result = max(right - left + 1, result)
-            right++
+        var left = 0
+        s.forEachIndexed { right, char ->
+            left = max(left, lastCharIndex.getOrDefault(char, -1) + 1)
+            result = max(result,right - left + 1)
+            lastCharIndex[char] = right
         }
         return result
     }
+}
+
+fun main() {
+    val problem = Problem3()
+    val actual = problem.lengthOfLongestSubstring("abcabcbb")
+    check(actual == 3)
 }
