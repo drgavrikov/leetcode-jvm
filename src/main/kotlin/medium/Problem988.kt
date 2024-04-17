@@ -46,5 +46,5 @@ fun main() {
     node2.right = node5
     node2.right = node6
 
-    println(problem988.smallestFromLeaf(node0))
+    check("dba" == problem988.smallestFromLeaf(node0))
 }
