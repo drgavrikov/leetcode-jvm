@@ -2,7 +2,7 @@ package medium
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/number-of-islands/
+ * @url https://leetcode.com/problems/number-of-islands/solutions/3375942/koltin-solution-use-dfs/
  */
 class Problem200 {
 
@@ -16,10 +16,11 @@ class Problem200 {
             if (!isCorrectCoord(x, y)) return
             if (grid[x][y] == '0') return
             grid[x][y] = '0'
-            dfs(x, y + 1)
-            dfs(x, y - 1)
-            dfs(x + 1, y)
-            dfs(x - 1, y)
+
+            val dx = intArrayOf(0,  0, 1, -1)
+            val dy = intArrayOf(1, -1, 0,  0)
+
+            (0..3).forEach { index -> dfs(x + dx[index], y + dy[index]) }
         }
 
         var result = 0
@@ -33,4 +34,17 @@ class Problem200 {
         }
         return result
     }
+}
+
+fun main() {
+    val problem200 = Problem200()
+    val actual = problem200.numIslands(
+        arrayOf(
+            charArrayOf('1', '1', '0', '0', '0'),
+            charArrayOf('1', '1', '0', '0', '0'),
+            charArrayOf('0', '0', '1', '0', '0'),
+            charArrayOf('0', '0', '0', '1', '1')
+        )
+    )
+    check(actual == 3)
 }
