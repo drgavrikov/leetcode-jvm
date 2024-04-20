@@ -2,10 +2,9 @@ package easy
 
 import kotlin.math.max
 
-
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * @url https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
  */
 class Problem121 {
     fun maxProfit(prices: IntArray): Int {
@@ -17,4 +16,10 @@ class Problem121 {
         }
         return result
     }
+}
+
+fun main() {
+    val problem = Problem121()
+    val actual = problem.maxProfit(intArrayOf(7, 1, 5, 3, 6, 4))
+    check(actual == 5)
 }
