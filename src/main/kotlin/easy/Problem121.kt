@@ -20,6 +20,14 @@ class Problem121 {
 
 fun main() {
     val problem = Problem121()
-    val actual = problem.maxProfit(intArrayOf(7, 1, 5, 3, 6, 4))
-    check(actual == 5)
+
+    runDynamicTest("test1") {
+        val actual = problem.maxProfit(intArrayOf(7, 1, 5, 3, 6, 4))
+        check(actual == 5) { "Test failed: Expected 5, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem.maxProfit(intArrayOf(7, 6, 4, 3, 1))
+        check(actual == 0) { "Test failed: Expected 0, actual: $actual" }
+    }
 }
