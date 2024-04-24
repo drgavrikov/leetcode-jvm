@@ -94,3 +94,18 @@ class Problem1284 {
         return -1
     }
 }
+
+fun main() {
+    val problem1284 = Problem1284()
+
+    runDynamicTest("test1") {
+        val actual = problem1284.minFlips(arrayOf(intArrayOf(0, 0), intArrayOf(0, 1)))
+        check(actual == 3) { "Test failed: Expected 3, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem1284.minFlips(arrayOf(intArrayOf(0, 0), intArrayOf(0, 0)))
+        check(actual == 0) { "Test failed: Expected 0, actual: $actual" }
+    }
+}
+
