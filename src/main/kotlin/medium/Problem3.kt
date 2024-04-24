@@ -23,6 +23,14 @@ class Problem3 {
 
 fun main() {
     val problem = Problem3()
-    val actual = problem.lengthOfLongestSubstring("abcabcbb")
-    check(actual == 3)
+
+    runDynamicTest("test1") {
+        val actual = problem.lengthOfLongestSubstring("abcabcbb")
+        check(actual == 3) { "Test failed: Expected 3, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem.lengthOfLongestSubstring("bbbbb")
+        check(actual == 1) { "Test failed: Expected 1, actual: $actual" }
+    }
 }
