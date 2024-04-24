@@ -13,3 +13,26 @@ class Problem14 {
         return strs[0].substring(0, commonPrefix)
     }
 }
+
+fun main() {
+    val problem14 = Problem14()
+
+    runDynamicTest("test1") {
+        val actual = problem14.longestCommonPrefix(arrayOf("flower", "flow", "flight"))
+        check(actual == "fl") { "Test failed: Expected 'fl', actual: '$actual'" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem14.longestCommonPrefix(arrayOf("dog", "racecar", "car"))
+        check(actual == "") { "Test failed: Expected empty string, actual: '$actual'" }
+    }
+}
+
+fun runDynamicTest(name: String, test: () -> Unit) {
+    try {
+        test()
+        println("Test $name passed")
+    } catch (e: AssertionError) {
+        println("Test $name failed: ${e.message}")
+    }
+}
