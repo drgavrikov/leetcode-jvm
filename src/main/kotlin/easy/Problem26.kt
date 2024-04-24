@@ -18,3 +18,17 @@ class Problem26 {
         return distinctIndex + 1
     }
 }
+
+fun main() {
+    val problem26 = Problem26()
+
+    runDynamicTest("test1") {
+        val actual = problem26.removeDuplicates(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4))
+        check(actual == 5) { "Test failed: Expected 5, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem26.removeDuplicates(intArrayOf(1, 2))
+        check(actual == 2) { "Test failed: Expected 2, actual: $actual" }
+    }
+}
