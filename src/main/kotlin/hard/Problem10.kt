@@ -32,3 +32,16 @@ class Problem10 {
         return false
     }
 }
+
+fun main() {
+    val problem10 = Problem10()
+
+    runDynamicTest("test1") {
+        check(!problem10.isMatch("ab", ".*c")) { "Test failed: 'ab' does not match '.*c'" }
+        check(problem10.isMatch("aa", "a.")) { "Test failed: 'aa' matches 'a.'" }
+        check(problem10.isMatch("aa", "a*")) { "Test failed: 'aa' matches 'a*'" }
+        check(!problem10.isMatch("aa", "a")) { "Test failed: 'aa' does not match 'a'" }
+        check(problem10.isMatch("aab", "c*a*b")) { "Test failed: 'aab' matches 'c*a*b'" }
+        check(!problem10.isMatch("mississippi", "mis*is*p*.")) { "Test failed: 'mississippi' does not match 'mis*is*p*.'" }
+    }
+}
