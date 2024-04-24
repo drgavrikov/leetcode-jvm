@@ -19,3 +19,17 @@ class Problem53 {
         return result
     }
 }
+
+fun main() {
+    val problem53 = Problem53()
+
+    runDynamicTest("test1") {
+        val actual = problem53.maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4))
+        check(actual == 6) { "Test failed: Expected 6, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem53.maxSubArray(intArrayOf(5, 4, -1, 7, 8))
+        check(actual == 23) { "Test failed: Expected 23, actual: $actual" }
+    }
+}
