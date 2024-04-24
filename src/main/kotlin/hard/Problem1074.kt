@@ -43,3 +43,29 @@ class Problem1074 {
         return result
     }
 }
+
+fun main() {
+    val problem1074 = Problem1074()
+
+    runDynamicTest("test1") {
+        val actual = problem1074.numSubmatrixSumTarget(
+            arrayOf(intArrayOf(0, 1, 0), intArrayOf(1, 1, 1), intArrayOf(0, 1, 0)),
+            0
+        )
+        check(actual == 4) { "Test failed: Expected 4, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem1074.numSubmatrixSumTarget(
+            arrayOf(
+                intArrayOf(0, 1, 1, 1, 0, 1),
+                intArrayOf(0, 0, 0, 0, 0, 1),
+                intArrayOf(0, 0, 1, 0, 0, 1),
+                intArrayOf(1, 1, 0, 1, 1, 0),
+                intArrayOf(1, 0, 0, 1, 0, 0)
+            ),
+            0
+        )
+        check(actual == 43) { "Test failed: Expected 43, actual: $actual" }
+    }
+}
