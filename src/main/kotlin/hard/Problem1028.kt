@@ -31,3 +31,14 @@ class Problem1028 {
         return vertices[0]
     }
 }
+
+fun main() {
+    val problem1028 = Problem1028()
+
+    runDynamicTest("test1") {
+        val tree = problem1028.recoverFromPreorder("1-401--349---90--88")
+        check(tree?.`val` == 1) { "Test failed: Expected root value 1, actual: ${tree?.`val`}" }
+        check(tree?.left?.`val` == 401) { "Test failed: Expected left child value 401, actual: ${tree?.left?.`val`}" }
+        check(tree?.left?.left?.`val` == 349) { "Test failed: Expected left-left child value 349, actual: ${tree?.left?.left?.`val`}" }
+    }
+}
