@@ -4,7 +4,7 @@ import kotlin.math.min
 
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/intersection-of-two-arrays-ii/
+     * @url https://leetcode.com/problems/intersection-of-two-arrays-ii/
  */
 class Problem350 {
     fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
@@ -29,4 +29,10 @@ class Problem350 {
             .flatMap { (key, value) -> (0 until value).map { key } }
             .toIntArray()
     }
+}
+
+fun main() {
+    val problem350 = Problem350()
+    val actual = problem350.intersect(intArrayOf(1, 2, 2, 1), intArrayOf(2, 2))
+    check(actual.contentEquals(intArrayOf(2, 2)))
 }
