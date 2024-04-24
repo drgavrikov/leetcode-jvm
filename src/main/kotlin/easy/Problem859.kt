@@ -18,3 +18,17 @@ class Problem859 {
         return false
     }
 }
+
+fun main() {
+    val problem859 = Problem859()
+
+    runDynamicTest("test1") {
+        val actual = problem859.buddyStrings("aaa", "aaa")
+        check(actual) { "Test failed: Expected true, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem859.buddyStrings("abc", "abc")
+        check(!actual) { "Test failed: Expected false, actual: $actual" }
+    }
+}
