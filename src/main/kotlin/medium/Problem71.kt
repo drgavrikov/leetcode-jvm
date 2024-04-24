@@ -19,6 +19,7 @@ class Problem71 {
                 if (stack.isNotEmpty()) stack.pop()
             } else stack.push(dir)
         }
+        stack.reversed().joinToString(separator = "") { it + 'a' }
         return "/" + stack.joinToString(separator = "/")
     }
 }
