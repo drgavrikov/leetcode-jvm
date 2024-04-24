@@ -27,12 +27,3 @@ fun main() {
         check(actual == "") { "Test failed: Expected empty string, actual: '$actual'" }
     }
 }
-
-fun runDynamicTest(name: String, test: () -> Unit) {
-    try {
-        test()
-        println("Test $name passed")
-    } catch (e: AssertionError) {
-        println("Test $name failed: ${e.message}")
-    }
-}
