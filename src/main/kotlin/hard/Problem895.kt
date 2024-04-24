@@ -32,3 +32,20 @@ class Problem895 {
         }
     }
 }
+
+fun main() {
+    val freqStack = Problem895.FreqStack()
+
+    runDynamicTest("test1") {
+        freqStack.push(5)
+        freqStack.push(7)
+        freqStack.push(5)
+        freqStack.push(7)
+        freqStack.push(4)
+        freqStack.push(5)
+        check(freqStack.pop() == 5) { "Test failed: Expected 5, actual: ${freqStack.pop()}" }
+        check(freqStack.pop() == 7) { "Test failed: Expected 7, actual: ${freqStack.pop()}" }
+        check(freqStack.pop() == 5) { "Test failed: Expected 5, actual: ${freqStack.pop()}" }
+        check(freqStack.pop() == 4) { "Test failed: Expected 4, actual: ${freqStack.pop()}" }
+    }
+}
