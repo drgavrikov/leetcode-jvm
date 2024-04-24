@@ -14,3 +14,18 @@ class Problem9 {
         return true
     }
 }
+
+fun main() {
+    val problem9 = Problem9()
+
+    runDynamicTest("test1") {
+        val actual = problem9.isPalindrome(121)
+        check(actual) { "Test failed: Expected true, actual: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem9.isPalindrome(-121)
+        check(!actual) { "Test failed: Expected false, actual: $actual" }
+    }
+}
+
