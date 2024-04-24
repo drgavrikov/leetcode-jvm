@@ -19,3 +19,12 @@ class Problem485 {
         return max(result, current)
     }
 }
+
+fun main() {
+    val problem485 = Problem485()
+
+    runDynamicTest("test1") {
+        val actual = problem485.findMaxConsecutiveOnes(intArrayOf(1, 1, 0, 1, 1, 1))
+        check(actual == 3) { "Test failed: Expected 3, actual: $actual" }
+    }
+}
