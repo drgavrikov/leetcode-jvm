@@ -1,5 +1,3 @@
-package hard
-
 /**
  * @author Aleksandr Gavrikov
  * @url https://leetcode.com/problems/first-missing-positive/description/
@@ -27,13 +25,10 @@ class Problem41 {
 fun main() {
     val problem41 = Problem41()
 
-    runDynamicTest("test1") {
-        val actual = problem41.firstMissingPositive(intArrayOf(1, 2, 0))
-        check(actual == 3) { "Test failed: Expected 3, actual: $actual" }
-    }
+    val actual1 = problem41.firstMissingPositive(intArrayOf(1, 2, 0))
+    check(actual1 == 3) { "Test failed: Expected 3, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem41.firstMissingPositive(intArrayOf(3, 4, -1, 1))
-        check(actual == 2) { "Test failed: Expected 2, actual: $actual" }
-    }
+    val actual2 = problem41.firstMissingPositive(intArrayOf(3, 4, -1, 1))
+    check(actual2 == 2) { "Test failed: Expected 2, actual: $actual2" }
 }
+

@@ -1,6 +1,3 @@
-package hard
-
-import TreeNode
 import java.util.*
 
 /**

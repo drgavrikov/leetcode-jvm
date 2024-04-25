@@ -1,5 +1,3 @@
-package hard
-
 fun runDynamicTest(name: String, test: () -> Unit) {
     try {
         test()

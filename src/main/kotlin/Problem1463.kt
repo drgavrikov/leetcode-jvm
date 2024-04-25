@@ -1,5 +1,3 @@
-package hard
-
 import kotlin.math.max
 
 /**

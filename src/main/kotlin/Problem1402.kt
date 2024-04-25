@@ -1,5 +1,3 @@
-package hard
-
 /**
  * @author Aleksandr Gavrikov
  * @url https://leetcode.com/problems/reducing-dishes/
