@@ -31,3 +31,16 @@ class Problem1567 {
         return max(nums.size - firstNegativeIndex - 1, lastNegativeIndex)
     }
 }
+
+fun main() {
+    val problem1567 = Problem1567()
+
+    val actual1 = problem1567.getMaxLen(intArrayOf(1, -2, -3, 4))
+    check(actual1 == 4) { "Test 1 failed" }
+
+    val actual2 = problem1567.getMaxLen(intArrayOf(1, 2, -3, 4))
+    check(actual2 == 2) { "Test 2 failed" }
+
+    val actual3 = problem1567.getMaxLen(intArrayOf(-1, 2, 0, 4, 0, -1, -2, -1))
+    check(actual3 == 2) { "Test 3 failed" }
+}
