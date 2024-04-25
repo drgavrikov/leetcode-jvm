@@ -26,3 +26,17 @@ class Problem11 {
         return maxArea
     }
 }
+
+fun main() {
+    val problem = Problem11()
+
+    runDynamicTest("test1") {
+        val actual = problem.maxArea(intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7))
+        check(actual == 49) { "Expected 49, but got: $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem.maxArea(intArrayOf(2, 1, 2))
+        check(actual == 4) { "Expected 4, but got: $actual" }
+    }
+}
