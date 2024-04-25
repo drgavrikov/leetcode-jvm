@@ -20,3 +20,16 @@ class Problem1509 {
         return result
     }
 }
+
+fun main() {
+    val problem1509 = Problem1509()
+
+    val actual1 = problem1509.minDifference(intArrayOf(5, 4, 2, 3))
+    check(actual1 == 0) { "Test 1 failed" }
+
+    val actual2 = problem1509.minDifference(intArrayOf(1, 5, 0, 10, 14))
+    check(actual2 == 1) { "Test 2 failed" }
+
+    val actual3 = problem1509.minDifference(intArrayOf(82, 81, 95, 75, 20))
+    check(actual3 == 1) { "Test 3 failed" }
+}
