@@ -20,3 +20,15 @@ class Problem56 {
         return result.toTypedArray()
     }
 }
+
+fun main() {
+    val problem = Problem56()
+
+    runDynamicTest("test1") {
+        val actual = problem.merge(
+            arrayOf(intArrayOf(1, 3), intArrayOf(2, 6), intArrayOf(8, 10), intArrayOf(15, 18))
+        )
+        check(actual contentDeepEquals arrayOf(intArrayOf(1, 6), intArrayOf(8, 10), intArrayOf(15, 18))) {
+            "Test 1 failed: Expected [[1, 6], [8, 10], [15, 18]], but got ${actual.contentDeepToString()}" }
+    }
+}
