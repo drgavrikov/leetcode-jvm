@@ -37,3 +37,31 @@ class Problem54 {
         return result
     }
 }
+
+fun main() {
+    val problem = Problem54()
+
+    runDynamicTest("test1") {
+        val actual = problem.spiralOrder(
+            arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))
+        )
+        check(
+            actual == listOf(
+                1, 2, 3, 6, 9, 8, 7, 4, 5
+            )
+        ) { "Test 1 failed: Expected [1, 2, 3, 6, 9, 8, 7, 4, 5], but got $actual" }
+    }
+
+    runDynamicTest("test2") {
+        val actual = problem.spiralOrder(
+            arrayOf(intArrayOf(1, 2, 3, 4), intArrayOf(5, 6, 7, 8), intArrayOf(9, 10, 11, 12))
+        )
+        check(
+            actual == listOf(
+                1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7
+            )
+        ) {
+            "Test 2 failed: Expected [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7], but got $actual"
+        }
+    }
+}
