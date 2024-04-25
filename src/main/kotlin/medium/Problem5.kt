@@ -25,3 +25,12 @@ class Problem5 {
         return s.substring(best.first, best.second + 1)
     }
 }
+
+fun main() {
+    val problem = Problem5()
+
+    runDynamicTest("test1") {
+        val actual = problem.longestPalindrome("babad")
+        check(actual == "bab") { "Expected 'bab', but got: $actual" }
+    }
+}
