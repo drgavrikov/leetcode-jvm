@@ -26,3 +26,12 @@ class Problem15 {
         return result.toList()
     }
 }
+
+fun main() {
+    val problem = Problem15()
+
+    runDynamicTest("test1") {
+        val actual = problem.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4))
+        check(actual == listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))) { "Expected ${listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))}, but got: $actual" }
+    }
+}
