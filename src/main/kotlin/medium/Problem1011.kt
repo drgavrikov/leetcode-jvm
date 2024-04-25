@@ -30,3 +30,17 @@ class Problem1011 {
         return days + 1
     }
 }
+
+fun main() {
+    val problem1011 = Problem1011()
+
+    val actual1 = problem1011.shipWithinDays(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 5)
+    check(actual1 == 15) { "Test 1 failed" }
+
+    val actual2 = problem1011.shipWithinDays(intArrayOf(3, 2, 2, 4, 1, 4), 3)
+    check(actual2 == 6) { "Test 2 failed" }
+
+    val actual3 = problem1011.shipWithinDays(intArrayOf(1, 2, 3, 1, 1), 4)
+    check(actual3 == 3) { "Test 3 failed" }
+}
+
