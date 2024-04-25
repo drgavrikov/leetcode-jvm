@@ -24,8 +24,14 @@ class Problem875 {
 }
 
 fun main() {
-    val problem = Problem875()
-    check(problem.minEatingSpeed(intArrayOf(3, 6, 7, 11), 8) == 4)
-    check(problem.minEatingSpeed(intArrayOf(30, 11, 23, 4, 20), 5) == 30)
-    check(problem.minEatingSpeed(intArrayOf(30, 11, 23, 4, 20), 6) == 23)
+    val problem875 = Problem875()
+
+    val actual1 = problem875.minEatingSpeed(intArrayOf(3, 6, 7, 11), 8)
+    check(actual1 == 4) { "Test 1 failed" }
+
+    val actual2 = problem875.minEatingSpeed(intArrayOf(30, 11, 23, 4, 20), 5)
+    check(actual2 == 30) { "Test 2 failed" }
+
+    val actual3 = problem875.minEatingSpeed(intArrayOf(30, 11, 23, 4, 20), 6)
+    check(actual3 == 23) { "Test 3 failed" }
 }
