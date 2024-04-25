@@ -17,27 +17,23 @@ class Problem100 {
 fun main() {
     val problem100 = Problem100()
 
-    runDynamicTest("test1") {
-        val p = TreeNode(1)
-        p.left = TreeNode(2)
-        p.right = TreeNode(3)
+    val p1 = TreeNode(1)
+    p1.left = TreeNode(2)
+    p1.right = TreeNode(3)
 
-        val q = TreeNode(1)
-        q.left = TreeNode(2)
-        q.right = TreeNode(3)
+    val q1 = TreeNode(1)
+    q1.left = TreeNode(2)
+    q1.right = TreeNode(3)
 
-        val actual = problem100.isSameTree(p, q)
-        check(actual) { "Test failed: Expected true, actual: $actual" }
-    }
+    val actual1 = problem100.isSameTree(p1, q1)
+    check(actual1) { "Test failed: Expected true, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val p = TreeNode(1)
-        p.left = TreeNode(2)
+    val p2 = TreeNode(1)
+    p2.left = TreeNode(2)
 
-        val q = TreeNode(1)
-        q.right = TreeNode(2)
+    val q2 = TreeNode(1)
+    q2.right = TreeNode(2)
 
-        val actual = problem100.isSameTree(p, q)
-        check(!actual) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual2 = problem100.isSameTree(p2, q2)
+    check(!actual2) { "Test failed: Expected false, actual: $actual2" }
 }

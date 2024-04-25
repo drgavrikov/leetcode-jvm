@@ -14,10 +14,6 @@ class Problem1672 {
 fun main() {
     val problem1672 = Problem1672()
 
-    runDynamicTest("test1") {
-        val actual = problem1672.maximumWealth(
-            arrayOf(intArrayOf(1, 2, 3), intArrayOf(3, 2, 1))
-        )
-        check(actual == 6) { "Test failed: Expected 6, actual: $actual" }
-    }
+    val actual = problem1672.maximumWealth(arrayOf(intArrayOf(1, 2, 3), intArrayOf(3, 2, 1)))
+    check(actual == 6) { "Test failed: Expected 6, actual: $actual" }
 }

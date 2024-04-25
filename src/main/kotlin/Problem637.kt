@@ -24,20 +24,20 @@ class Problem637 {
 fun main() {
     val problem637 = Problem637()
 
-    runDynamicTest("test1") {
-        val node1 = TreeNode(3)
-        val node2 = TreeNode(9)
-        val node3 = TreeNode(20)
-        val node4 = TreeNode(15)
-        val node5 = TreeNode(7)
+    val node1 = TreeNode(3)
+    val node2 = TreeNode(9)
+    val node3 = TreeNode(20)
+    val node4 = TreeNode(15)
+    val node5 = TreeNode(7)
 
-        node1.left = node2
-        node1.right = node3
+    node1.left = node2
+    node1.right = node3
 
-        node3.left = node4
-        node3.right = node5
+    node3.left = node4
+    node3.right = node5
 
-        val actual = problem637.averageOfLevels(root = node1)
-        check(actual.contentEquals(doubleArrayOf(3.0, 14.5, 11.0))) { "Test failed: Expected [3.0, 14.5, 11.0], actual: ${actual.contentToString()}" }
+    val actual = problem637.averageOfLevels(root = node1)
+    check(actual.contentEquals(doubleArrayOf(3.0, 14.5, 11.0))) {
+        "Test failed: Expected [3.0, 14.5, 11.0], actual: ${actual.contentToString()}"
     }
 }

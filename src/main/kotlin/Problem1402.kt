@@ -21,13 +21,9 @@ class Problem1402 {
 fun main() {
     val problem1402 = Problem1402()
 
-    runDynamicTest("test1") {
-        val actual = problem1402.maxSatisfaction(intArrayOf(-1, -8, 0, 5, -9))
-        check(actual == 14) { "Test failed: Expected 14, actual: $actual" }
-    }
+    val actual1 = problem1402.maxSatisfaction(intArrayOf(-1, -8, 0, 5, -9))
+    check(actual1 == 14) { "Test failed: Expected 14, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem1402.maxSatisfaction(intArrayOf(4, 3, 2))
-        check(actual == 20) { "Test failed: Expected 20, actual: $actual" }
-    }
+    val actual2 = problem1402.maxSatisfaction(intArrayOf(4, 3, 2))
+    check(actual2 == 20) { "Test failed: Expected 20, actual: $actual2" }
 }

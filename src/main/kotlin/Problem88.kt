@@ -21,12 +21,10 @@ class Problem88 {
 fun main() {
     val problem = Problem88()
 
-    runDynamicTest("test1") {
-        val num1 = intArrayOf(1, 2, 3, 0, 0, 0)
-        val n = 3
-        val num2 = intArrayOf(2, 5, 6)
-        val m = 3
-        problem.merge(num1, n, num2, m)
-        check(num1.contentEquals(intArrayOf(1, 2, 2, 3, 5, 6))) { "Test failed: Expected [1, 2, 2, 3, 5, 6], actual: ${num1.contentToString()}" }
-    }
+    val num1 = intArrayOf(1, 2, 3, 0, 0, 0)
+    val n = 3
+    val num2 = intArrayOf(2, 5, 6)
+    val m = 3
+    problem.merge(num1, n, num2, m)
+    check(num1.contentEquals(intArrayOf(1, 2, 2, 3, 5, 6))) { "Test failed: Expected [1, 2, 2, 3, 5, 6], actual: ${num1.contentToString()}" }
 }

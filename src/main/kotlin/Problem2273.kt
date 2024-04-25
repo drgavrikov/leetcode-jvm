@@ -22,8 +22,6 @@ class Problem2273 {
 fun main() {
     val problem = Problem2273()
 
-    runDynamicTest("test1") {
-        val actual = problem.removeAnagrams(arrayOf("abba", "baba", "bbaa", "cd", "cd"))
-        check(actual == listOf("abba", "cd")) { "Test failed: Expected [abba, cd], actual: $actual" }
-    }
+    val actual = problem.removeAnagrams(arrayOf("abba", "baba", "bbaa", "cd", "cd"))
+    check(actual == listOf("abba", "cd")) { "Test failed: Expected [abba, cd], actual: $actual" }
 }

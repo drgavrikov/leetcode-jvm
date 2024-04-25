@@ -20,14 +20,9 @@ class Problem748 {
 fun main() {
     val problem748 = Problem748()
 
-    runDynamicTest("test1") {
-        val actual = problem748.shortestCompletingWord("1s3 PSt", arrayOf("step", "steps", "stripe", "stepple"))
-        check(actual == "steps") { "Test failed: Expected 'steps', actual: '$actual'" }
-    }
+    val actual1 = problem748.shortestCompletingWord("1s3 PSt", arrayOf("step", "steps", "stripe", "stepple"))
+    check(actual1 == "steps") { "Test failed: Expected 'steps', actual: '$actual1'" }
 
-    runDynamicTest("test2") {
-        val actual = problem748.shortestCompletingWord("1s3 456", arrayOf("looks", "pest", "stew", "show"))
-        check(actual == "pest") { "Test failed: Expected 'pest', actual: '$actual'" }
-    }
+    val actual2 = problem748.shortestCompletingWord("1s3 456", arrayOf("looks", "pest", "stew", "show"))
+    check(actual2 == "pest") { "Test failed: Expected 'pest', actual: '$actual2'" }
 }
-

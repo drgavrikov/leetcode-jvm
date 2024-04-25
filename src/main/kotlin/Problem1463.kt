@@ -50,38 +50,33 @@ class Problem1463 {
 fun main() {
     val problem1463 = Problem1463()
 
-    runDynamicTest("test1") {
-        val actual = problem1463.cherryPickup(
-            arrayOf(
-                intArrayOf(1, 1),
-                intArrayOf(1, 1)
-            )
+    val actual1 = problem1463.cherryPickup(
+        arrayOf(
+            intArrayOf(1, 1),
+            intArrayOf(1, 1)
         )
-        check(actual == 4) { "Test failed: Expected 4, actual: $actual" }
-    }
+    )
+    check(actual1 == 4) { "Test failed: Expected 4, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem1463.cherryPickup(
-            arrayOf(
-                intArrayOf(1, 0, 0, 3),
-                intArrayOf(0, 0, 0, 3),
-                intArrayOf(0, 0, 3, 3),
-                intArrayOf(9, 0, 3, 3),
-            )
+    val actual2 = problem1463.cherryPickup(
+        arrayOf(
+            intArrayOf(1, 0, 0, 3),
+            intArrayOf(0, 0, 0, 3),
+            intArrayOf(0, 0, 3, 3),
+            intArrayOf(9, 0, 3, 3)
         )
-        check(actual == 22) { "Test failed: Expected 22, actual: $actual" }
-    }
+    )
+    check(actual2 == 22) { "Test failed: Expected 22, actual: $actual2" }
 
-    runDynamicTest("test3") {
-        val actual = problem1463.cherryPickup(
-            arrayOf(
-                intArrayOf(1, 0, 0, 0, 0, 0, 1),
-                intArrayOf(2, 0, 0, 0, 0, 3, 0),
-                intArrayOf(2, 0, 9, 0, 0, 0, 0),
-                intArrayOf(0, 3, 0, 5, 4, 0, 0),
-                intArrayOf(1, 0, 2, 3, 0, 0, 6)
-            )
+    val actual3 = problem1463.cherryPickup(
+        arrayOf(
+            intArrayOf(1, 0, 0, 0, 0, 0, 1),
+            intArrayOf(2, 0, 0, 0, 0, 3, 0),
+            intArrayOf(2, 0, 9, 0, 0, 0, 0),
+            intArrayOf(0, 3, 0, 5, 4, 0, 0),
+            intArrayOf(1, 0, 2, 3, 0, 0, 6)
         )
-        check(actual == 28) { "Test failed: Expected 28, actual: $actual" }
-    }
+    )
+    check(actual3 == 28) { "Test failed: Expected 28, actual: $actual3" }
 }
+

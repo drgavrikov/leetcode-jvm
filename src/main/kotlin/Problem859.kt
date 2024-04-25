@@ -20,13 +20,9 @@ class Problem859 {
 fun main() {
     val problem859 = Problem859()
 
-    runDynamicTest("test1") {
-        val actual = problem859.buddyStrings("aaa", "aaa")
-        check(actual) { "Test failed: Expected true, actual: $actual" }
-    }
+    val actual1 = problem859.buddyStrings("aaa", "aaa")
+    check(actual1) { "Test failed: Expected true, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem859.buddyStrings("abc", "abc")
-        check(!actual) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual2 = problem859.buddyStrings("abc", "abc")
+    check(!actual2) { "Test failed: Expected false, actual: $actual2" }
 }

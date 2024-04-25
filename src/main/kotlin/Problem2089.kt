@@ -15,9 +15,7 @@ class Problem2089 {
 fun main() {
     val problem = Problem2089()
 
-    runDynamicTest("test1") {
-        val nums = intArrayOf(1, 2, 5, 2, 3)
-        val actual = problem.targetIndices(nums, 2)
-        check(actual == listOf(1, 2)) { "Test failed: Expected [1, 2], actual: $actual" }
-    }
+    val nums = intArrayOf(1, 2, 5, 2, 3)
+    val actual = problem.targetIndices(nums, 2)
+    check(actual == listOf(1, 2)) { "Test failed: Expected [1, 2], actual: $actual" }
 }

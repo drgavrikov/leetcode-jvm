@@ -18,11 +18,10 @@ class Problem412 {
 fun main() {
     val problem412 = Problem412()
 
-    runDynamicTest("test1") {
-        val actual = problem412.fizzBuzz(15)
-        val result = listOf(
-            "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"
-        )
-        check(actual == result) { "Test failed: Expected $result, actual: $actual" }
-    }
+    val actual = problem412.fizzBuzz(15)
+    val result = listOf(
+        "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"
+    )
+    check(actual == result) { "Test failed: Expected $result, actual: $actual" }
 }
+

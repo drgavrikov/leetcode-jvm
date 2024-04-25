@@ -14,13 +14,9 @@ class Problem942 {
 fun main() {
     val problem = Problem942()
 
-    runDynamicTest("test1") {
-        val actual = problem.diStringMatch("IDID")
-        check(actual.contentEquals(intArrayOf(0, 4, 1, 3, 2))) { "Test failed: Expected [0, 4, 1, 3, 2], actual: ${actual.contentToString()}" }
-    }
+    val actual1 = problem.diStringMatch("IDID")
+    check(actual1.contentEquals(intArrayOf(0, 4, 1, 3, 2))) { "Test failed: Expected [0, 4, 1, 3, 2], actual: ${actual1.contentToString()}" }
 
-    runDynamicTest("test2") {
-        val actual = problem.diStringMatch("III")
-        check(actual.contentEquals(intArrayOf(0, 1, 2, 3))) { "Test failed: Expected [0, 1, 2, 3], actual: ${actual.contentToString()}" }
-    }
+    val actual2 = problem.diStringMatch("III")
+    check(actual2.contentEquals(intArrayOf(0, 1, 2, 3))) { "Test failed: Expected [0, 1, 2, 3], actual: ${actual2.contentToString()}" }
 }

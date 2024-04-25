@@ -39,21 +39,18 @@ class Problem1255 {
 fun main() {
     val problem1255 = Problem1255()
 
-    runDynamicTest("test1") {
-        val actual = problem1255.maxScoreWords(
-            arrayOf("dog", "cat", "dad", "good"),
-            charArrayOf('a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'),
-            intArrayOf(1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        )
-        check(actual == 23) { "Test failed: Expected 23, actual: $actual" }
-    }
+    val actual1 = problem1255.maxScoreWords(
+        arrayOf("dog", "cat", "dad", "good"),
+        charArrayOf('a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'),
+        intArrayOf(1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    )
+    check(actual1 == 23) { "Test failed: Expected 23, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem1255.maxScoreWords(
-            arrayOf("leetcode"),
-            charArrayOf('l', 'e', 't', 'c', 'o', 'd'),
-            intArrayOf(0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0)
-        )
-        check(actual == 0) { "Test failed: Expected 0, actual: $actual" }
-    }
+    val actual2 = problem1255.maxScoreWords(
+        arrayOf("leetcode"),
+        charArrayOf('l', 'e', 't', 'c', 'o', 'd'),
+        intArrayOf(0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0)
+    )
+    check(actual2 == 0) { "Test failed: Expected 0, actual: $actual2" }
 }
+

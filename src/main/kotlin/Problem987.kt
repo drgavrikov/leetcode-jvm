@@ -30,35 +30,31 @@ class Problem987 {
 fun main() {
     val problem987 = Problem987()
 
-    runDynamicTest("test1") {
-        val root = TreeNode(3)
-
-        root.left = TreeNode(9)
-        root.right = TreeNode(20)
-
-        root.right!!.left = TreeNode(15)
-        root.right!!.right = TreeNode(7)
-
-        val actual = problem987.verticalTraversal(root)
-        check(
-            actual == listOf(listOf(9), listOf(3, 15), listOf(20), listOf(7))
-        ) { "Test failed: Expected [[9], [3, 15], [20], [7]], actual: $actual" }
+    val root1 = TreeNode(3).apply {
+        left = TreeNode(9)
+        right = TreeNode(20).apply {
+            left = TreeNode(15)
+            right = TreeNode(7)
+        }
     }
+    val actual1 = problem987.verticalTraversal(root1)
+    check(
+        actual1 == listOf(listOf(9), listOf(3, 15), listOf(20), listOf(7))
+    ) { "Test failed: Expected [[9], [3, 15], [20], [7]], actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val root = TreeNode(1)
-
-        root.left = TreeNode(2)
-        root.right = TreeNode(3)
-
-        root.left!!.left = TreeNode(4)
-        root.left!!.right = TreeNode(5)
-        root.right!!.left = TreeNode(6)
-        root.right!!.right = TreeNode(7)
-
-        val actual = problem987.verticalTraversal(root)
-        check(
-            actual == listOf(listOf(4), listOf(2), listOf(1, 5, 6), listOf(3), listOf(7))
-        ) { "Test failed: Expected [[4], [2], [1, 5, 6], [3], [7]], actual: $actual" }
+    val root2 = TreeNode(1).apply {
+        left = TreeNode(2).apply {
+            left = TreeNode(4)
+            right = TreeNode(5)
+        }
+        right = TreeNode(3).apply {
+            left = TreeNode(6)
+            right = TreeNode(7)
+        }
+    }
+    val actual2 = problem987.verticalTraversal(root2)
+    check(actual2 == listOf(listOf(4), listOf(2), listOf(1, 5, 6), listOf(3), listOf(7))) {
+        "Test failed: Expected [[4], [2], [1, 5, 6], [3], [7]], actual: $actual2"
     }
 }
+

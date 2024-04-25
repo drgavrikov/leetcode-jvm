@@ -14,23 +14,16 @@ class Problem326 {
 fun main() {
     val problem326 = Problem326()
 
-    runDynamicTest("test1") {
-        val actual = problem326.isPowerOfThree(3)
-        check(actual) { "Test failed: Expected true, actual: $actual" }
-    }
+    val actual1 = problem326.isPowerOfThree(3)
+    check(actual1) { "Test failed: Expected true, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem326.isPowerOfThree(-27)
-        check(!actual) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual2 = problem326.isPowerOfThree(-27)
+    check(!actual2) { "Test failed: Expected false, actual: $actual2" }
 
-    runDynamicTest("test3") {
-        val actual = problem326.isPowerOfThree(15)
-        check(!actual) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual3 = problem326.isPowerOfThree(15)
+    check(!actual3) { "Test failed: Expected false, actual: $actual3" }
 
-    runDynamicTest("test4") {
-        val actual = problem326.isPowerOfThree(0)
-        check(!actual) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual4 = problem326.isPowerOfThree(0)
+    check(!actual4) { "Test failed: Expected false, actual: $actual4" }
 }
+

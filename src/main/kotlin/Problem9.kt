@@ -16,14 +16,10 @@ class Problem9 {
 fun main() {
     val problem9 = Problem9()
 
-    runDynamicTest("test1") {
-        val actual = problem9.isPalindrome(121)
-        check(problem9.isPalindrome(121)) { "Test failed: Expected true, actual: $actual" }
-    }
+    val actual1 = problem9.isPalindrome(121)
+    check(actual1) { "Test failed: Expected true, actual: $actual1" }
 
-    runDynamicTest("test2") {
-        val actual = problem9.isPalindrome(-121)
-        check(!problem9.isPalindrome(-121)) { "Test failed: Expected false, actual: $actual" }
-    }
+    val actual2 = problem9.isPalindrome(-121)
+    check(!actual2) { "Test failed: Expected false, actual: $actual2" }
 }
 

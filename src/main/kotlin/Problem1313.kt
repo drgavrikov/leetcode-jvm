@@ -17,8 +17,6 @@ class Problem1313 {
 fun main() {
     val problem1313 = Problem1313()
 
-    runDynamicTest("test1") {
-        val actual = problem1313.decompressRLElist(intArrayOf(1, 2, 3, 4))
-        check(actual.contentEquals(intArrayOf(2, 4, 4, 4))) { "Test failed: Expected [2, 4, 4, 4], actual: ${actual.contentToString()}" }
-    }
+    val actual = problem1313.decompressRLElist(intArrayOf(1, 2, 3, 4))
+    check(actual.contentEquals(intArrayOf(2, 4, 4, 4))) { "Test failed: Expected [2, 4, 4, 4], actual: ${actual.contentToString()}" }
 }

@@ -16,8 +16,8 @@ class Problem1929 {
 fun main() {
     val problem1929 = Problem1929()
 
-    runDynamicTest("test1") {
-        val actual = problem1929.getConcatenation(intArrayOf(1, 2, 1))
-        check(actual.contentEquals(intArrayOf(1, 2, 1, 1, 2, 1))) { "Test failed: Expected [1, 2, 1, 1, 2, 1], actual: ${actual.contentToString()}" }
+    val actual = problem1929.getConcatenation(intArrayOf(1, 2, 1))
+    check(actual.contentEquals(intArrayOf(1, 2, 1, 1, 2, 1))) {
+        "Test failed: Expected [1, 2, 1, 1, 2, 1], actual: ${actual.contentToString()}"
     }
 }

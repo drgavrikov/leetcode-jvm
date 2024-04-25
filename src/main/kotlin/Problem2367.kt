@@ -13,10 +13,8 @@ class Problem2367 {
 fun main() {
     val problem = Problem2367()
 
-    runDynamicTest("test1") {
-        val nums = intArrayOf(0, 1, 4, 6, 7, 10)
-        val diff = 3
-        val actual = problem.arithmeticTriplets(nums, diff)
-        check(actual == 2) { "Test failed: Expected 2, actual: $actual" }
-    }
+    val nums = intArrayOf(0, 1, 4, 6, 7, 10)
+    val diff = 3
+    val actual = problem.arithmeticTriplets(nums, diff)
+    check(actual == 2) { "Test failed: Expected 2, actual: $actual" }
 }

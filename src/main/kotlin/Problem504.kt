@@ -20,18 +20,12 @@ class Problem504 {
 fun main() {
     val problem = Problem504()
 
-    runDynamicTest("test1") {
-        val actual = problem.convertToBase7(100)
-        check(actual == "202") { "Test failed: Expected '202', actual: '$actual'" }
-    }
+    val actual1 = problem.convertToBase7(100)
+    check(actual1 == "202") { "Test failed: Expected '202', actual: '$actual1'" }
 
-    runDynamicTest("test2") {
-        val actual = problem.convertToBase7(-7)
-        check(actual == "-10") { "Test failed: Expected '-10', actual: '$actual'" }
-    }
+    val actual2 = problem.convertToBase7(-7)
+    check(actual2 == "-10") { "Test failed: Expected '-10', actual: '$actual2'" }
 
-    runDynamicTest("test3") {
-        val actual = problem.convertToBase7(6)
-        check(actual == "6") { "Test failed: Expected '6', actual: '$actual'" }
-    }
+    val actual3 = problem.convertToBase7(6)
+    check(actual3 == "6") { "Test failed: Expected '6', actual: '$actual3'" }
 }
