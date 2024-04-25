@@ -20,3 +20,11 @@ class Problem443 {
         return charIndex
     }
 }
+
+fun main() {
+    val problem = Problem443()
+
+    val chars = charArrayOf('a', 'a', 'a', 'b', 'b', 'a', 'a')
+    val actual = problem.compress(chars)
+    check(actual == 6) { "Test 1 failed: Expected 6, but got $actual" }
+}
