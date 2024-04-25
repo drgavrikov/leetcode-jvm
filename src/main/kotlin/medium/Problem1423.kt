@@ -17,3 +17,14 @@ class Problem1423 {
         return maxScore
     }
 }
+
+fun main() {
+    val problem1423 = Problem1423()
+
+    val actual1 = problem1423.maxScore(intArrayOf(1, 2, 3, 4, 5, 6, 1), 3)
+    check(actual1 == 12) { "Test 1 failed" }
+
+    val actual2 = problem1423.maxScore(intArrayOf(9, 7, 7, 9, 7, 7, 9), 7)
+    check(actual2 == 55) { "Test 2 failed" }
+}
+
