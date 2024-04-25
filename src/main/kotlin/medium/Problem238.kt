@@ -20,3 +20,14 @@ class Problem238 {
         return nums
     }
 }
+
+fun main() {
+    val problem = Problem238()
+
+    val actual1 = problem.productExceptSelf(intArrayOf(1, 2, 3, 4))
+    check(actual1.contentEquals(intArrayOf(24, 12, 8, 6))) { "Test 1 failed: Expected ${intArrayOf(24, 12, 8, 6)}, but got $actual1" }
+
+    val actual2 = problem.productExceptSelf(intArrayOf(-1, 1, 0, -3, 3))
+    check(actual2.contentEquals(intArrayOf(0, 0, 9, 0, 0))) { "Test 2 failed: Expected ${intArrayOf(0, 0, 9, 0, 0)}, but got $actual2" }
+}
+
