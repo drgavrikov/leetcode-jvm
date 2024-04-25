@@ -20,3 +20,14 @@ class Problem22 {
         return result.sorted()
     }
 }
+
+fun main() {
+    val problem = Problem22()
+
+    runDynamicTest("test1") {
+        val actual = problem.generateParenthesis(3)
+        check(actual == listOf("((()))", "(()())", "(())()", "()(())", "()()()")) {
+            "Expected ${listOf("((()))", "(()())", "(())()", "()(())", "()()()")}, but got: $actual"
+        }
+    }
+}
