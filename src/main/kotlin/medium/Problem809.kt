@@ -33,3 +33,13 @@ class Problem809 {
         return words.count { word -> isExpressive(s, word) }
     }
 }
+
+fun main() {
+    val problem809 = Problem809()
+
+    val actual1 = problem809.expressiveWords("heeellooo", arrayOf("hello", "hi", "helo"))
+    check(actual1 == 1) { "Test 1 failed" }
+
+    val actual2 = problem809.expressiveWords("aaa", arrayOf("aaaa"))
+    check(actual2 == 0) { "Test 2 failed" }
+}
