@@ -37,3 +37,14 @@ class Problem1136 {
         return if (cycle) -1 else depth.maxOrNull()!!
     }
 }
+
+fun main() {
+    val problem1136 = Problem1136()
+
+    val actual1 = problem1136.minimumSemesters(3, arrayOf(intArrayOf(1, 3), intArrayOf(2, 3)))
+    check(actual1 == 2) { "Test 1 failed" }
+
+    val actual2 = problem1136.minimumSemesters(3, arrayOf(intArrayOf(1, 2), intArrayOf(2, 3), intArrayOf(3, 1)))
+    check(actual2 == -1) { "Test 2 failed" }
+}
+
