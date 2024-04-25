@@ -41,3 +41,15 @@ class Problem1631 {
         return efforts[n - 1][m - 1]
     }
 }
+
+fun main() {
+    val problem1631 = Problem1631()
+    val actual = problem1631.minimumEffortPath(
+        arrayOf(
+            intArrayOf(1, 2, 2),
+            intArrayOf(3, 8, 2),
+            intArrayOf(5, 3, 5),
+        )
+    )
+    check(actual == 2) { "Test 1 failed" }
+}
