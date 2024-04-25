@@ -34,13 +34,15 @@ class Problem155 {
 }
 
 fun main() {
-    val problem155 = Problem155()
-    val stack = problem155.MinStack()
-    stack.push(-2)
-    stack.push(0)
-    stack.push(-3)
-    check(-3 == stack.getMin())
-    stack.pop()
-    check(0 == stack.top())
-    check(-2 == stack.getMin())
+    val minStack = Problem155().MinStack()
+
+    runDynamicTest("test1") {
+        minStack.push(-2)
+        minStack.push(0)
+        minStack.push(-3)
+        check(minStack.getMin() == -3) { "Test 1 failed: Expected minimum value to be -3" }
+        minStack.pop()
+        check(minStack.top() == 0) { "Test 1 failed: Expected top value to be 0" }
+        check(minStack.getMin() == -2) { "Test 1 failed: Expected minimum value to be -2" }
+    }
 }
