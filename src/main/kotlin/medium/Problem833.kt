@@ -41,3 +41,31 @@ class Problem833 {
         return result.toString()
     }
 }
+
+fun main() {
+    val problem833 = Problem833()
+
+    val actual1 = problem833.findReplaceString(
+        "abcd",
+        intArrayOf(0, 2),
+        arrayOf("a", "cd"),
+        arrayOf("eee", "ffff"),
+    )
+    check(actual1 == "eeebffff") { "Test 1 failed" }
+
+    val actual2 = problem833.findReplaceString(
+        "abcd",
+        intArrayOf(0, 2),
+        arrayOf("ab", "ec"),
+        arrayOf("eee", "ffff"),
+    )
+    check(actual2 == "eeecd") { "Test 2 failed" }
+
+    val actual3 = problem833.findReplaceString(
+        "abcde",
+        intArrayOf(2, 2),
+        arrayOf("cde", "cdef"),
+        arrayOf("fe", "f"),
+    )
+    check(actual3 == "abfe") { "Test 3 failed" }
+}
