@@ -21,3 +21,13 @@ class Problem1525 {
         return goodSplits
     }
 }
+
+fun main() {
+    val problem1525 = Problem1525()
+
+    val actual1 = problem1525.numSplits("aacaba")
+    check(actual1 == 2) { "Test 1 failed" }
+
+    val actual2 = problem1525.numSplits("abcd")
+    check(actual2 == 1) { "Test 2 failed" }
+}
