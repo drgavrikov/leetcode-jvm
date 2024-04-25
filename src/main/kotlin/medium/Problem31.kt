@@ -23,5 +23,20 @@ class Problem31 {
 
         nums.reverse(i + 1, nums.size)
     }
+}
 
+fun main() {
+    val problem = Problem31()
+
+    runDynamicTest("test1") {
+        val nums = intArrayOf(1, 2, 3)
+        problem.nextPermutation(nums)
+        check(nums contentEquals intArrayOf(1, 3, 2)) { "Test 1 failed: Expected [1, 3, 2], but got: ${nums.contentToString()}" }
+    }
+
+    runDynamicTest("test2") {
+        val nums = intArrayOf(3, 2, 1)
+        problem.nextPermutation(nums)
+        check(nums contentEquals intArrayOf(1, 2, 3)) { "Test 2 failed: Expected [1, 2, 3], but got: ${nums.contentToString()}" }
+    }
 }
