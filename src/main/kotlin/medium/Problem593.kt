@@ -26,3 +26,18 @@ class Problem593 {
                 squareDistance(p1, p3) == squareDistance(p2, p4)
     }
 }
+
+fun main() {
+    val problem593 = Problem593()
+
+    var actual = problem593.validSquare(
+        intArrayOf(0, 0), intArrayOf(1, 1), intArrayOf(0, 1), intArrayOf(1, 0)
+    )
+    check(actual) { "Test 1 failed: Expected true, but got false" }
+
+    actual = problem593.validSquare(
+        intArrayOf(0, 0), intArrayOf(1, 1), intArrayOf(1, 0), intArrayOf(0, 12)
+    )
+    check(!actual) { "Test 2 failed: Expected false, but got true" }
+}
+
