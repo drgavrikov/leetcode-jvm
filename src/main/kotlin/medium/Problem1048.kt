@@ -38,3 +38,13 @@ class Problem1048 {
         return true
     }
 }
+
+fun main() {
+    val problem1048 = Problem1048()
+
+    val actual1 = problem1048.longestStrChain(arrayOf("a", "b", "ba", "bca", "bda", "bdca"))
+    check(actual1 == 4) { "Test 1 failed" }
+
+    val actual2 = problem1048.longestStrChain(arrayOf("xbc", "pcxbcf", "xb", "cxbc", "pcxbc"))
+    check(actual2 == 5) { "Test 2 failed" }
+}
