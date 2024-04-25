@@ -24,3 +24,12 @@ class Problem690 {
         return used.sumOf { it.importance }
     }
 }
+
+fun main() {
+    val problem690 = Problem690()
+
+    val employee1 = Problem690.Employee(1, 5, listOf(2, 3))
+    val employee2 = Problem690.Employee(2, 3, listOf())
+    val employee3 = Problem690.Employee(3, 3, listOf())
+    check(problem690.getImportance(listOf(employee1, employee2, employee3), 1) == 11) { "Test 1 failed" }
+}
