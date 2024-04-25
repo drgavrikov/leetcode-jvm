@@ -24,3 +24,12 @@ class Problem61 {
         return dist[n - 1][m - 1]
     }
 }
+
+fun main() {
+    val problem61 = Problem61()
+
+    runDynamicTest("test1") {
+        val actual = problem61.minPathSum(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6)))
+        check(actual == 12) { "Test 1 failed: Expected 12, but got $actual" }
+    }
+}
