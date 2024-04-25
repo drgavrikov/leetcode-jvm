@@ -43,3 +43,21 @@ class Problem721 {
             .toList()
     }
 }
+
+fun main() {
+    val problem721 = Problem721()
+
+    val accounts = listOf(
+        listOf("John", "johnsmith@mail.com", "john_newyork@mail.com"),
+        listOf("John", "johnsmith@mail.com", "john00@mail.com"),
+        listOf("Mary", "mary@mail.com"),
+        listOf("John", "johnnybravo@mail.com")
+    )
+    val result = listOf(
+        listOf("John", "john00@mail.com", "john_newyork@mail.com", "johnsmith@mail.com"),
+        listOf("Mary", "mary@mail.com"),
+        listOf("John", "johnnybravo@mail.com")
+    )
+    check(problem721.accountsMerge(accounts) == result) { "Test 1 failed" }
+}
+
