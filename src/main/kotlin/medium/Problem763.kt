@@ -26,3 +26,13 @@ class Problem763 {
         return result.toList()
     }
 }
+
+fun main() {
+    val problem763 = Problem763()
+
+    val actual1 = problem763.partitionLabels("ababcbacadefegdehijhklij")
+    check(actual1 == listOf(9, 7, 8)) { "Test 1 failed" }
+
+    val actual2 = problem763.partitionLabels("eccbbbbdec")
+    check(actual2 == listOf(10)) { "Test 2 failed" }
+}
