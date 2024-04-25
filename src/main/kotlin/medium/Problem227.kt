@@ -42,7 +42,9 @@ class Problem227 {
 }
 
 fun main() {
-    val problem227 = Problem227()
-    check(problem227.calculate("3+2*2") == 7)
-    check(problem227.calculate(" 3+5 / 2 ") == 5)
+    val problem = Problem227()
+
+    check(problem.calculate("3+2*2") == 7) { "Test 1 failed: Expected result to be 7" }
+
+    check(problem.calculate(" 3+5 / 2 ") == 5) { "Test 2 failed: Expected result to be 5" }
 }
