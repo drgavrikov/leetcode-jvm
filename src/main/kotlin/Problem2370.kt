@@ -28,5 +28,5 @@ fun main() {
     check(actual1 == 4) { "Test failed: Expected 4, actual: $actual1" }
 
     val actual2 = problem.longestIdealString("abcd", 3)
-    check(actual1 == 4) { "Test failed: Expected 4, actual: $actual2    " }
+    check(actual1 == 4) { "Test failed: Expected 4, actual: $actual2" }
 }
