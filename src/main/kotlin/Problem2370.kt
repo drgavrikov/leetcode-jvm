@@ -1,21 +1,22 @@
-import kotlin.math.abs
-import kotlin.math.max
-
 /**
  * @author Aleksandr Gavrikov
- * @url https://leetcode.com/problems/longest-ideal-subsequence/
+ * @url https://leetcode.com/problems/longest-ideal-subsequence/solutions/5083170/dynamic-programming-with-linear-complexity-beats-90-0-of-users-with-c/
  */
 class Problem2370 {
     fun longestIdealString(s: String, k: Int): Int {
         val dp = IntArray(26) { 0 }
         s.forEach { char ->
             val index = char - 'a'
-            var result = 0
-            for (prev in 0 until 26) {
-                if (abs(prev - index) <= k)
-                    result = max(result, dp[prev])
+            var maxLength = 0
+            for (shift in 0..k) {
+                if (char - shift in 'a'..'z' && maxLength < dp[char - shift - 'a'] + 1) {
+                    maxLength = dp[char - shift - 'a'] + 1
+                }
+                if (char + shift in 'a'..'z' && maxLength < dp[char + shift - 'a'] + 1) {
+                    maxLength = dp[char + shift - 'a'] + 1
+                }
             }
-            dp[index] = result + 1
+            dp[index] = maxLength
         }
         return dp.maxOf { it }
     }
