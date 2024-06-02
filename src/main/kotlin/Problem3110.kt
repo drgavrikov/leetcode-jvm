@@ -16,4 +16,3 @@ fun main() {
     val actual1 = problem.scoreOfString("")
     check(actual1 == 12) { "Test 1 failed" }
 }
-
