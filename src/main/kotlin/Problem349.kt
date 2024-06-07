@@ -4,10 +4,9 @@
  */
 class Problem349 {
     fun intersection(nums1: IntArray, nums2: IntArray): IntArray {
+        val unique1 = nums1.toSet()
         val unique2 = nums2.toSet()
-        return nums1
-            .filter { num -> num in unique2 }
-            .toIntArray()
+        return unique1.intersect(unique2).toIntArray()
     }
 }
 
