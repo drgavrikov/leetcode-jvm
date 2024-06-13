@@ -4,19 +4,8 @@
  */
 class Problem1122 {
     fun relativeSortArray(arr1: IntArray, arr2: IntArray): IntArray {
-        val max = arr1.maxOrNull()!!
-        val counts = IntArray(max + 1) { 0 }
-        arr1.forEach { num -> counts[num]++ }
-
-        var index = 0
-        arr2.forEach { num ->
-            repeat(counts[num]) { arr1[index++] = num }
-            counts[num] = 0
-        }
-        counts.forEachIndexed { num, count ->
-            repeat(count) { arr1[index++] = num }
-        }
-        return arr1
+        val indices = arr2.withIndex().associate { it.value to it.index }
+        return arr1.sortedBy { num -> indices[num] ?: (num + arr2.size) }.toIntArray()
     }
 }
 
