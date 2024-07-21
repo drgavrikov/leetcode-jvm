@@ -4,18 +4,14 @@
  */
 class Problem1605 {
     fun restoreMatrix(rowSum: IntArray, colSum: IntArray): Array<IntArray> {
-        val n = rowSum.size
-        val m = colSum.size
-        val matrix = Array(n) { IntArray(m) }
-        for (row in 0 until n) {
-            for (col in 0 until m) {
+        return (rowSum.indices).map { row ->
+            (colSum.indices).map { col ->
                 val value = minOf(rowSum[row], colSum[col])
-                matrix[row][col] = value
                 rowSum[row] -= value
                 colSum[col] -= value
-            }
-        }
-        return matrix
+                value
+            }.toIntArray()
+        }.toTypedArray()
     }
 }
 
